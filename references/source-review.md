@@ -131,4 +131,4 @@ Source: <https://github.com/rdudov/agents>
 
 ## Final Design Choice
 
-This skill stays instruction-only, but it no longer stops at a solo patch loop. Version 0.3.0 adds explicit role definitions, `gpt-5.4`/`xhigh` policy for hard decisions, task and memory ledgers, report artifacts, source comparison, real-run acceptance checks, declared runtime requirements, explicit invocation, and repo-owned evidence while preserving the clean public-surface boundary.
+This skill stays instruction-only, but it no longer stops at a solo patch loop. Version 0.3.1 adds explicit role definitions, `gpt-5.4`/`xhigh` policy for hard decisions, task and memory ledgers, report artifacts, source comparison, real-run acceptance checks, declared runtime requirements, explicit invocation, disabled model auto-invocation, and repo-owned evidence while preserving the clean public-surface boundary.

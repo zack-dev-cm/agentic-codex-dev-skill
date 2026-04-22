@@ -29,13 +29,13 @@ See [SECURITY.md](SECURITY.md) for responsible disclosure and the release bleed 
 
 - [Task ledger](docs/agentic/tasks.md)
 - [Memory ledger](docs/agentic/memory.md)
-- [Real-run report](docs/agentic/reports/2026-04-22-v0.3.0-real-run.md)
+- [Real-run report](docs/agentic/reports/2026-04-22-v0.3.1-real-run.md)
 
 ## Publish
 
 ```bash
 python3 -m antirot.cli lint SKILL.md --strict
-clawhub publish . --version 0.3.0
+clawhub publish . --version 0.3.1
 clawhub inspect agentic-codex-dev --files
 ```
 

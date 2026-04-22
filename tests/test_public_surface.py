@@ -43,9 +43,10 @@ class PublicSurfaceTests(unittest.TestCase):
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
 
         self.assertIn("name: agentic-codex-dev", skill)
-        self.assertIn("version: 0.3.0", skill)
+        self.assertIn("version: 0.3.1", skill)
         self.assertIn("https://github.com/zack-dev-cm/agentic-codex-dev-skill", skill)
         self.assertIn('"requires":{"bins":["git","python3","clawhub"]}', skill)
+        self.assertIn("disable-model-invocation: true", skill)
 
     def test_skill_keeps_multi_agent_contract(self) -> None:
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
@@ -152,12 +153,12 @@ class PublicSurfaceTests(unittest.TestCase):
         expected_files = (
             "docs/agentic/tasks.md",
             "docs/agentic/memory.md",
-            "docs/agentic/reports/2026-04-22-v0.3.0-real-run.md",
+            "docs/agentic/reports/2026-04-22-v0.3.1-real-run.md",
         )
         for relative_path in expected_files:
             self.assertTrue((ROOT / relative_path).is_file(), relative_path)
 
-        report = (ROOT / "docs/agentic/reports/2026-04-22-v0.3.0-real-run.md").read_text(
+        report = (ROOT / "docs/agentic/reports/2026-04-22-v0.3.1-real-run.md").read_text(
             encoding="utf-8"
         )
         for required in (
