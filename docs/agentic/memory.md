@@ -22,4 +22,4 @@
 
 ## Last Verified
 
-- 2026-04-22: `agentic-codex-dev@0.2.2` was published with ClawHub `Security: CLEAN` and `hasWarnings: false`.
+- 2026-04-22: `agentic-codex-dev@0.3.1` was published with ClawHub `Security: CLEAN` and `hasWarnings: false`.
