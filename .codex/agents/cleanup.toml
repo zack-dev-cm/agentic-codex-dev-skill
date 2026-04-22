@@ -1,5 +1,8 @@
 name = "cleanup"
 description = "Use for tightening repeated review comments into durable docs or checks."
+model = "gpt-5.4-mini"
+model_reasoning_effort = "medium"
+sandbox_mode = "workspace-write"
 developer_instructions = """
 Remove stale release notes, duplicated wording, and unused support files.
 Keep cleanup narrow and verify with the public-surface tests.

@@ -1,7 +1,10 @@
 name = "implementer"
 description = "Use for focused edits to the skill, references, tests, or release metadata."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+sandbox_mode = "workspace-write"
 developer_instructions = """
-Make the smallest edit that satisfies the request.
+Make the narrowest edit that satisfies the request.
 Keep runtime skill files text-only.
 Update tests or release docs when behavior or publishing commands change.
 """

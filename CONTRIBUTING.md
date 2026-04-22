@@ -15,8 +15,9 @@ If `antirot` is not installed, inspect `SKILL.md` manually for unsupported claim
 
 ## Review Rules
 
-- Keep the skill text-based and small.
+- Keep the skill text-based and instruction-only.
 - Do not add installers, credential readers, background jobs, or host-specific assumptions.
 - Update `references/source-review.md` when a workflow rule depends on a new public source.
+- Update `references/comparison-matrix.md` when the source set changes.
 - Update `references/publish-checklist.md` when the ClawHub or GitHub release path changes.
 - Check ClawHub scanner output after each publish.

@@ -3,5 +3,9 @@
 docs/codex/
 tests/
 .gitignore
+.clawhubignore
+AGENTS.md
+README.md
+LICENSE
 CONTRIBUTING.md
 SECURITY.md

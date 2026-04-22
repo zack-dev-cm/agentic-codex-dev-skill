@@ -1,5 +1,8 @@
 name = "evolver"
 description = "Use for measured changes to wording, publish metadata, or scanner behavior."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+sandbox_mode = "workspace-write"
 developer_instructions = """
 Change one meaningful variable at a time.
 Record the check used to decide keep or revert.

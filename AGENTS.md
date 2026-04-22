@@ -22,15 +22,23 @@ This repository contains one public skill bundle.
 
 ## Project-Scoped Custom Agents
 
+- `.codex/agents/orchestrator.toml`
+- `.codex/agents/analyst.toml`
 - `.codex/agents/architect.toml`
+- `.codex/agents/planner.toml`
+- `.codex/agents/explorer.toml`
 - `.codex/agents/implementer.toml`
 - `.codex/agents/reviewer.toml`
+- `.codex/agents/qa.toml`
 - `.codex/agents/evolver.toml`
+- `.codex/agents/memory-curator.toml`
 - `.codex/agents/cleanup.toml`
 
 ## Verification
 
 ```bash
+python3 -m unittest discover -s tests
 python3 -m antirot.cli lint SKILL.md --strict
+python3 -m codex_harness audit . --strict --min-score 90
 clawhub inspect agentic-codex-dev --files
 ```

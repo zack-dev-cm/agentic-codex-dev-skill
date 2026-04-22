@@ -18,6 +18,7 @@ Before publishing a new ClawHub version:
 ```bash
 python3 -m unittest discover -s tests
 python3 -m antirot.cli lint SKILL.md --strict
+python3 -m codex_harness audit . --strict --min-score 90
 clawhub inspect agentic-codex-dev --files
 ```
 
