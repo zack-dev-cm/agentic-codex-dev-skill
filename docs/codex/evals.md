@@ -15,6 +15,7 @@ Metrics:
 - ClawHub security status is `CLEAN`.
 - The ClawHub file list excludes `.codex/`, `.github/`, `docs/codex/`, `tests/`, and repo-only root docs.
 - Runtime skill text includes system design, role roster, model policy, ledgers, consistency gates, and real-run eval guidance.
+- Repo-owned evidence exists under `docs/agentic/` and stays out of the ClawHub runtime bundle.
 
 Regression risks:
 

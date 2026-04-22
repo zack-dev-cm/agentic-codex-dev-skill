@@ -1,5 +1,6 @@
 .codex/
 .github/
+docs/agentic/
 docs/codex/
 tests/
 .gitignore

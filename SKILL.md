@@ -1,7 +1,7 @@
 ---
 name: agentic-codex-dev
 description: Use when planning, implementing, reviewing, coordinating, or publishing agentic software development work with Codex, GitHub, and OpenClaw/ClawHub. Provides a production-grade multi-agent operating loop with role roster, model policy, task ledger, memory ledger, report artifacts, verification gates, and anti-bleed public-surface review.
-version: 0.2.2
+version: 0.3.0
 metadata: {"openclaw":{"homepage":"https://github.com/zack-dev-cm/agentic-codex-dev-skill","requires":{"bins":["git","python3","clawhub"]},"tags":["codex","github","clawhub","agentic-development"]}}
 ---
 

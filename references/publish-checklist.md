@@ -7,7 +7,7 @@ Use this when preparing the skill for GitHub and ClawHub.
 1. Confirm `SKILL.md` frontmatter:
    - `name: agentic-codex-dev`
    - `description: ...`
-   - `version: 0.2.2`
+   - `version: 0.3.0`
 2. Confirm the folder name is the intended ClawHub slug: `agentic-codex-dev`.
 3. Confirm every file is text-based and needed:
    - `SKILL.md`
@@ -52,7 +52,7 @@ clawhub whoami
 Publish the skill:
 
 ```bash
-clawhub publish . --version 0.2.2
+clawhub publish . --version 0.3.0
 ```
 
 After publishing:

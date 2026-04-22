@@ -25,11 +25,17 @@ It teaches a Karpathy-style operating loop: state the goal, inspect the repo, as
 
 See [SECURITY.md](SECURITY.md) for responsible disclosure and the release bleed gate.
 
+## Evidence
+
+- [Task ledger](docs/agentic/tasks.md)
+- [Memory ledger](docs/agentic/memory.md)
+- [Real-run report](docs/agentic/reports/2026-04-22-v0.3.0-real-run.md)
+
 ## Publish
 
 ```bash
 python3 -m antirot.cli lint SKILL.md --strict
-clawhub publish . --version 0.2.2
+clawhub publish . --version 0.3.0
 clawhub inspect agentic-codex-dev --files
 ```
 
