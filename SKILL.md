@@ -1,15 +1,8 @@
 ---
 name: agentic-codex-dev
 description: Use when planning, implementing, reviewing, coordinating, or publishing agentic software development work with Codex, GitHub, and OpenClaw/ClawHub. Provides a production-grade multi-agent operating loop with role roster, model policy, task ledger, memory ledger, report artifacts, verification gates, and anti-bleed public-surface review.
-version: 0.2.0
-metadata:
-  openclaw:
-    homepage: https://github.com/zack-dev-cm/agentic-codex-dev-skill
-    tags:
-      - codex
-      - github
-      - clawhub
-      - agentic-development
+version: 0.2.1
+metadata: {"openclaw":{"homepage":"https://github.com/zack-dev-cm/agentic-codex-dev-skill","requires":{"bins":["git","python3","clawhub"]},"tags":["codex","github","clawhub","agentic-development"]}}
 ---
 
 # Agentic Codex Dev
@@ -28,6 +21,15 @@ Use this skill for:
 - coordinating explicit parallel/subagent work with role ownership and integration control
 
 Do not use it for one-line answers, pure brainstorming, or tasks that only need a command output.
+
+## Runtime Requirements
+
+ClawHub requirement metadata for this skill declares `git`, `python3`, and `clawhub`, following the ClawHub skill metadata format at <https://github.com/openclaw/clawhub/blob/main/docs/skill-format.md>.
+
+- Local plan, review, and implementation modes may work with the tools already available in the host.
+- Verification and publish modes expect the declared binaries plus optional Python modules such as `antirot` and `codex_harness`.
+- This skill should not request, print, or store credentials. GitHub and ClawHub publishing must use existing local authenticated CLI sessions, or the user must authenticate manually outside the prompt.
+- Do not run `git push`, `clawhub publish`, or other remote-changing commands unless the user asked for publish or remote update work.
 
 ## Core Loop
 
