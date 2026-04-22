@@ -1,0 +1,7 @@
+.codex/
+.github/
+docs/codex/
+tests/
+.gitignore
+CONTRIBUTING.md
+SECURITY.md

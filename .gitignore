@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.clawhub/
+.DS_Store
+*.log
+*.tmp
+*.bak

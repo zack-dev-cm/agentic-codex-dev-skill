@@ -18,6 +18,10 @@ It teaches a Karpathy-style loop: state the goal, inspect the repo, make a small
 - `references/source-review.md`: source analysis behind the workflow.
 - `references/publish-checklist.md`: GitHub and ClawHub release checklist.
 
+## Security
+
+See [SECURITY.md](SECURITY.md) for responsible disclosure and the release bleed gate.
+
 ## Publish
 
 ```bash

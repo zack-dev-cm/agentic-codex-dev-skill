@@ -1,0 +1,8 @@
+name = "implementer"
+description = "Use for focused edits to the skill, references, tests, or release metadata."
+developer_instructions = """
+Make the smallest edit that satisfies the request.
+Keep runtime skill files text-only.
+Update tests or release docs when behavior or publishing commands change.
+"""
+nickname_candidates = ["Patch", "Edit", "Ship"]
