@@ -43,7 +43,7 @@ class PublicSurfaceTests(unittest.TestCase):
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
 
         self.assertIn("name: agentic-codex-dev", skill)
-        self.assertIn("version: 0.2.1", skill)
+        self.assertIn("version: 0.2.2", skill)
         self.assertIn("https://github.com/zack-dev-cm/agentic-codex-dev-skill", skill)
         self.assertIn('"requires":{"bins":["git","python3","clawhub"]}', skill)
 
@@ -77,6 +77,9 @@ class PublicSurfaceTests(unittest.TestCase):
         for relative_path in ("SKILL.md", "README.md", "agents/openai.yaml"):
             text = (ROOT / relative_path).read_text(encoding="utf-8").lower()
             self.assertNotRegex(text, r"\bsmall\b")
+
+        metadata = (ROOT / "agents" / "openai.yaml").read_text(encoding="utf-8")
+        self.assertIn("allow_implicit_invocation: false", metadata)
 
     def test_clawhub_ignore_excludes_repo_harness(self) -> None:
         ignore = (ROOT / ".clawhubignore").read_text(encoding="utf-8")

@@ -29,7 +29,7 @@ See [SECURITY.md](SECURITY.md) for responsible disclosure and the release bleed 
 
 ```bash
 python3 -m antirot.cli lint SKILL.md --strict
-clawhub publish . --version 0.2.1
+clawhub publish . --version 0.2.2
 clawhub inspect agentic-codex-dev --files
 ```
 

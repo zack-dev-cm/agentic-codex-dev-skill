@@ -4,4 +4,4 @@ interface:
   default_prompt: "Use $agentic-codex-dev to plan, implement, verify, review, report, and publish an agentic software development change with explicit roles and a clean GitHub and ClawHub surface."
 
 policy:
-  allow_implicit_invocation: true
+  allow_implicit_invocation: false

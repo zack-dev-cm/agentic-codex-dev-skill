@@ -53,7 +53,7 @@ Hazards:
 
 ## Report Sample
 
-Objective: release version 0.2.1 with multi-agent operating structure and declared runtime requirements.
+Objective: release version 0.2.2 with multi-agent operating structure, declared runtime requirements, and explicit invocation.
 
 Sources: OpenAI Codex subagents, OpenAI harness engineering, optillm, openevolve, autoresearch, symphony, paperclip, gstack, OpenClaw, Andrej Karpathy skills, agent-orchestrator, rdudov agents.
 
