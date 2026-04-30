@@ -1,10 +1,10 @@
 ---
 name: agentic-codex-dev
 description: Use when planning, implementing, reviewing, coordinating, or publishing agentic software development work with Codex, GitHub, and OpenClaw/ClawHub. Provides a production-grade multi-agent operating loop with role roster, model policy, task ledger, memory ledger, report artifacts, verification gates, and anti-bleed public-surface review.
-version: 0.3.1
+version: 0.3.3
 user-invocable: true
 disable-model-invocation: true
-metadata: {"openclaw":{"homepage":"https://github.com/zack-dev-cm/agentic-codex-dev-skill","requires":{"bins":["git","python3","clawhub"]},"tags":["codex","github","clawhub","agentic-development"]}}
+metadata: {"openclaw":{"homepage":"https://github.com/zack-dev-cm/agentic-codex-dev-skill","skillKey":"agentic-codex-dev","requires":{"bins":["git","clawhub"],"anyBins":["python3","python"]},"install":[{"kind":"node","label":"Install ClawHub CLI","package":"clawhub","bins":["clawhub"]}],"tags":["codex","github","clawhub","agentic-development"]}}
 ---
 
 # Agentic Codex Dev
@@ -202,7 +202,7 @@ For a serious workflow eval, run this skill against a real repo task and archive
 - role roster used, including model and reasoning choices
 - task ledger rows with owners and file boundaries
 - at least one implementation or review task with verification output
-- public-surface scan for private paths, local URLs, tokens, and stale claims
+- public-release check for private-path examples, local-only URLs, secret-shaped placeholders, and stale claims
 - final report with changed files, tests, residual risks, and follow-up blockers
 
 Use [example run](references/example-run.md) as the minimum acceptance shape.
