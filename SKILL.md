@@ -1,7 +1,7 @@
 ---
 name: agentic-codex-dev
 description: Use when planning, implementing, reviewing, coordinating, or publishing agentic software development work with Codex, GitHub, and OpenClaw/ClawHub. Provides a production-grade multi-agent operating loop with role roster, model policy, task ledger, memory ledger, report artifacts, verification gates, and anti-bleed public-surface review.
-version: 0.3.3
+version: 0.3.4
 user-invocable: true
 disable-model-invocation: true
 metadata: {"openclaw":{"homepage":"https://github.com/zack-dev-cm/agentic-codex-dev-skill","skillKey":"agentic-codex-dev","requires":{"bins":["git","clawhub"],"anyBins":["python3","python"]},"install":[{"kind":"node","label":"Install ClawHub CLI","package":"clawhub","bins":["clawhub"]}],"tags":["codex","github","clawhub","agentic-development"]}}
@@ -66,9 +66,60 @@ Pick the mode that fits the risk:
 - **Harness**: improve repo legibility: docs, CI, local scripts, custom agents, or audit gates.
 - **Evolve**: metric-driven optimization. One variable per experiment, fixed budget, log keep/discard.
 - **Publish**: GitHub/ClawHub release readiness, metadata, license, docs, and verification.
+- **Skill Import**: adapt upstream skills or agent workflows into local ClawHub/Codex/Claude artifacts with staging, audit, and active-project impact gates before install.
 - **Multi-Agent**: explicit role roster, task ledger, isolation plan, review gates, memory update, and final report.
 
 Prefer Patch unless the task shows it needs more structure. Use Multi-Agent only when the user explicitly asks for subagents, delegation, or parallel agent work.
+
+## Skill Import Project Mode
+
+Use this mode when adapting upstream skill repositories, `SKILL.md` files, Claude commands, agent personas, or workflow packs into local Codex, Claude Code, ClawHub, or OpenClaw artifacts.
+
+Default stance: import ideas, not trust. Do not install, enable, publish, or run upstream skill code until provenance, public-surface safety, and active-project impact are understood.
+
+Workflow:
+
+1. Inventory the source:
+   - source path or URL,
+   - commit or release tag when available,
+   - skill names,
+   - commands,
+   - personas,
+   - hooks,
+   - scripts,
+   - references,
+   - licenses.
+2. Classify each candidate:
+   - `PORT`: narrow, safe, runtime-neutral enough to adapt directly,
+   - `REWRITE`: useful workflow pattern but runtime mechanics, trigger breadth, scripts, privacy boundaries, or proof criteria must change,
+   - `REJECT`: prompt override, credential access, hidden install, destructive behavior, unreviewable executable content, scraping, auto-posting, or claims risk.
+3. Stage in an isolated repo-local workspace. Do not install into global Codex, Claude, or OpenClaw paths during evaluation.
+4. Assign owners in the task ledger:
+   - explorer for source inventory,
+   - architect for runtime boundary decisions,
+   - implementer for rewritten skill text,
+   - reviewer for public-surface and install-risk review,
+   - memory curator for stable decisions and rejected patterns.
+5. Convert to a portable core plus adapters:
+   - canonical `SKILL.md` core,
+   - Codex notes for custom agents, sandbox, subagent boundaries, and verification,
+   - Claude Code notes for skills, commands, agents, and hook cautions,
+   - ClawHub/OpenClaw notes for metadata, required binaries, install destination, and public registry risk.
+6. Run gates before install or publish:
+   - static skill safety scan,
+   - duplicate-name and precedence check,
+   - public-surface scan for private paths, local URLs, tokens, copied paid/community content, and stale claims,
+   - focused fixture or dry-run prompt,
+   - report entry naming accepted, rewritten, and rejected candidates.
+7. Install or publish only after explicit user approval for the exact artifact, destination, and command.
+
+Stop conditions:
+
+- source provenance is unclear,
+- candidate requires secrets or private exports,
+- destination would shadow an active skill without explicit replace approval,
+- hooks or scripts mutate workspaces outside declared ownership,
+- no credible verification path exists.
 
 ## System Design
 
