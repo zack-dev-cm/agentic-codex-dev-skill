@@ -43,9 +43,9 @@ class PublicSurfaceTests(unittest.TestCase):
         skill = (ROOT / "SKILL.md").read_text(encoding="utf-8")
 
         self.assertIn("name: agentic-codex-dev", skill)
-        self.assertIn("version: 0.3.1", skill)
+        self.assertIn("version: 0.3.4", skill)
         self.assertIn("https://github.com/zack-dev-cm/agentic-codex-dev-skill", skill)
-        self.assertIn('"requires":{"bins":["git","python3","clawhub"]}', skill)
+        self.assertIn('"requires":{"bins":["git","clawhub"],"anyBins":["python3","python"]}', skill)
         self.assertIn("disable-model-invocation: true", skill)
 
     def test_skill_keeps_multi_agent_contract(self) -> None:
@@ -55,6 +55,7 @@ class PublicSurfaceTests(unittest.TestCase):
             "## System Design",
             "## Task, Memory, and Report Ledgers",
             "## Role Roster",
+            "## Skill Import Project Mode",
             "## Model Policy",
             "## Consistency and Effectiveness Gates",
             "## Real Example Eval",
@@ -67,6 +68,7 @@ class PublicSurfaceTests(unittest.TestCase):
             "task ledger",
             "memory ledger",
             "report ledger",
+            "Skill Import",
             "agents.max_depth = 1",
             "references/comparison-matrix.md",
             "references/system-design.md",
